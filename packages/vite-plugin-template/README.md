@@ -5,7 +5,7 @@ PROJECT TAGLINE HERE
 ## Installation
 
 ```bash
-pnpm i -D vite-plugin-env-config
+pnpm i -D @svitejs/vite-plugin-template
 ```
 
 ## Usage
