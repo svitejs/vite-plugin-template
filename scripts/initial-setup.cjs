@@ -3,6 +3,10 @@ const child_process = require('child_process');
 
 const ERR_SELF_INIT = 'Init called on project template itself';
 
+function camelCase(str) {
+	return str.toLowerCase().replace(/[-_][a-z]/g, (group) => group.slice(-1).toUpperCase())
+}
+
 async function run_command(command) {
 	return new Promise((resolve, reject) => {
 		child_process.exec(command, (err, stdout) => {
@@ -28,7 +32,9 @@ async function main() {
 		throw ERR_SELF_INIT;
 	}
 	const mainPackage = githubProject.substring(githubProject.indexOf('/') + 1);
-	const pluginFunctionName = mainPackage.replace('vite-plugin-','').replace(/[^a-zA-Z]/g,'')
+	const pluginFunctionName = camelCase(
+		mainPackage.replace('vite-plugin-','').replace(/[^a-zA-Z]/g,'')
+	)
 	const replaceValues = (c) => {
 		return c
 			.replace(/svitejs\/vite-plugin-template/g, githubProject)
@@ -36,7 +42,7 @@ async function main() {
 			.replace(/vite-plugin-template/g, mainPackage)
 			.replace(/~~AUTHOR~~/g, user)
 			.replace(/~~YEAR~~/g, new Date().getFullYear())
-			.replace(/pluginFunction/, pluginFunctionName)
+			.replace(/pluginFunction/g, pluginFunctionName)
 			;
 	};
 
