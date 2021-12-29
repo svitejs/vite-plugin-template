@@ -33,7 +33,7 @@ async function main() {
 	}
 	const mainPackage = githubProject.substring(githubProject.indexOf('/') + 1);
 	const pluginFunctionName = camelCase(
-		mainPackage.replace('vite-plugin-','').replace(/[^a-zA-Z]/g,'')
+		mainPackage.replace('vite-plugin-','').replace(/[^a-zA-Z-_]/g,'')
 	)
 	const replaceValues = (c) => {
 		return c
