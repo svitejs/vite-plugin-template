@@ -61,6 +61,7 @@ async function main() {
 			'.github/workflows/release.yml',
 			'packages/playground/README.md',
 			'packages/vite-plugin-template/package.json',
+			'packages/vite-plugin-template/README.md',
 			'packages/vite-plugin-template/src/index.ts',
 			'packages/vite-plugin-template/tests/index.spec.ts',
 			'packages/vite-plugin-template/LICENSE',
