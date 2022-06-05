@@ -39,7 +39,7 @@ You can use this either as a GitHub template or with degit as explained below.
 
 1. Use branches for development
 2. Add commits
-3. Add changeset with `pnpx changeset`
+3. Add changeset with `pnpm changeset`
 4. Push branch and open a PR
 5. Check CI results and merge PR into main
 6. Release workflow creates a PR "Version Packages (next)" to collect changes to be released
@@ -52,3 +52,10 @@ When you're ready to release, remove `"private": true` in the main workspace's `
 2. Release workflow automatically publishes npm package, creates GitHub release info, and tags the release
 
 > NOTE: New workspaces should **always** have `"private": true` or it will try to publish them.
+
+## Support for commonjs
+
+This template creates an esm-only plugin by default. If you need to support commonjs, follow these steps:
+
+1. Update tsup config to include 'cjs' output and enable shims if needed
+2. Update package.json exports map to add `"require": "./dist/index.cjs"` next to the import mapping

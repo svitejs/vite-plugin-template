@@ -5,13 +5,11 @@
   "author": "~~AUTHOR~~",
   "private": true,
   "type": "module",
-  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -22,7 +20,7 @@
     "test:coverage": "vitest --coverage"
   },
   "engines": {
-    "node": "^12.20 || ^14.13.1 || >= 16"
+    "node": "^14.13.1 || ^16.7.0 || >=18"
   },
   "repository": {
     "type": "git",
@@ -34,10 +32,10 @@
   },
   "homepage": "https://github.com/svitejs/vite-plugin-template/tree/main/packages/vite-plugin-template#readme",
   "peerDependencies": {
-    "vite": "^2.7.9"
+    "vite": "^2.9.9"
   },
   "devDependencies": {
     "vite": "^2.9.9",
-    "vitest": "^0.12.9"
+    "vitest": "^0.13.1"
   }
 }
