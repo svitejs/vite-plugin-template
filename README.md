@@ -57,5 +57,5 @@ When you're ready to release, remove `"private": true` in the main workspace's `
 
 This template creates an esm-only plugin by default. If you need to support commonjs, follow these steps:
 
-- update tsup config to include 'cjs' output and enable shims if needed
-- update package.json exports map to add `"require":"./dist/index.cjs"` next to the import mapping
+1. Update tsup config to include 'cjs' output and enable shims if needed
+2. Update package.json exports map to add `"require": "./dist/index.cjs"` next to the import mapping
