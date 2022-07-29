@@ -35,7 +35,7 @@
     "vite": "^2.9.9"
   },
   "devDependencies": {
-    "vite": "^2.9.13",
+    "vite": "^3.0.4",
     "vitest": "^0.17.0"
   }
 }
