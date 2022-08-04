@@ -5,5 +5,5 @@ export const tsup = {
 	sourcemap: true,
 	splitting: false,
 	clean: true,
-	target: 'node14.13.1'
+	target: 'node14.18.0'
 };
