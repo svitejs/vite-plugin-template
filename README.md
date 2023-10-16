@@ -1,3 +1,7 @@
+# OUTDATED
+
+This template is no longer maintained. Consider using a different one or start from scratch. 
+
 # vite-plugin-template
 
 This is a template repository to quickly set up new vite plugins
